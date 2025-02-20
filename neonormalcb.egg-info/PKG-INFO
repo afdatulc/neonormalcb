@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: neonormalcb
+Version: 0.1.0
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pymc
+Requires-Dist: pytensor
+Requires-Dist: tensorflow_probability
+Dynamic: requires-dist
