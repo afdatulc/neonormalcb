@@ -60,8 +60,7 @@ def logcdf(y: TensorVariable, mu: TensorVariable, sigma: TensorVariable, alpha: 
     )
 
 
-class Msnburr_iia:
-
+class msnburr_iia:
     def __new__(self, name:str, mu, sigma, alpha, observed=None, **kwargs):
         if int(pm.__version__[0])==5 and int(pm.__version__[2:4]) >= 11:
             return pm.CustomDist(

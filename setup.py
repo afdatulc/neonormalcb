@@ -5,10 +5,10 @@ setup(
     version='0.1.0',
     packages=find_packages(),
     install_requires=[
-        'numpy',
-        'scipy',
-        'pymc',          
-        'pytensor',     
-        'tensorflow_probability'  
+        "pymc>=5.0",
+        "bambi>=0.13",
+        "numpy<2.1.0,>=1.26.0",
+        "scipy",       
+        "pytensor"
     ]
 )

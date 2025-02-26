@@ -77,5 +77,5 @@ class msnburr:
             logp=logp,
             logcdf=logcdf,
             random=random,
-            moment=moment
+            # moment=moment
         )

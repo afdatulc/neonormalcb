@@ -1,12 +1,11 @@
-
 import pymc as pm
 import numpy as np
 import pytensor.tensor as pt
 
 from pytensor.tensor import TensorVariable
+from typing import Optional, Tuple
 from pymc.distributions.dist_math import check_parameters
 from pymc.distributions.shape_utils import rv_size_is_none
-from typing import Optional, Tuple
 
 def logp(y: TensorVariable, mu: TensorVariable, sigma: TensorVariable, alpha: TensorVariable):
     omega = (1 + (1 / alpha))**(alpha + 1) / np.sqrt(2 * np.pi)
@@ -53,7 +52,7 @@ def random(
         raise ValueError("sigma must more than 0")
     if alpha <= 0:
         raise ValueError("alpha must more than 0")
-    u = rng.uniform(low=0, high=1, size=size) 
+    u = rng.uniform(low=0, high=1, size=size)
     omega = (1+(1/alpha))**(alpha+1)/np.sqrt(2*np.pi)
     random = mu - sigma/omega*(np.log(alpha)+np.log((u**(-1/alpha))-1))
     return np.asarray(random)
@@ -66,7 +65,7 @@ class msnburr:
             logp=logp,
             logcdf=logcdf,
             random=random,
-            # moment=moment,
+            moment=moment,
             observed=observed,
             **kwargs
         )

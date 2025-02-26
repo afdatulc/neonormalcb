@@ -1,7 +1,11 @@
 setup.py
-neonormalcb/MSNBurr_IIa_distribution.py
-neonormalcb/MSNBurr_distribution.py
-neonormalcb/__init__.py
+bambi_family/__init__.py
+bambi_family/bambi_families.py
+bambi_family/tempCodeRunnerFile.py
+distributions/__init__.py
+distributions/fsst.py
+distributions/msnburr.py
+distributions/msnburr_iia.py
 neonormalcb.egg-info/PKG-INFO
 neonormalcb.egg-info/SOURCES.txt
 neonormalcb.egg-info/dependency_links.txt
